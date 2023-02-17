@@ -1,21 +1,75 @@
-<!DOCTYPE html>
-<head>
-  <title>OpenAI Quickstart</title>
-  <link
-    rel="shortcut icon"
-    href="{{ url_for('static', filename='dog.png') }}"
-  />
-  <link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}" />
-</head>
-
-<body>
-  <img src="{{ url_for('static', filename='dog.png') }}" class="icon" />
-  <h3>Name my pet</h3>
-  <form action="/" method="post">
-    <input type="text" name="animal" placeholder="Enter an animal" required />
-    <input type="submit" value="Generate names" />
-  </form>
-  {% if result %}
-  <div class="result">{{ result }}</div>
-  {% endif %}
-</body>
+<!doctype html>
+<html>
+  <head>
+    <title>Convert CircleCI to GitlabCI</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 20px;
+      }
+      h1 {
+        text-align: center;
+      }
+      form {
+        margin-bottom: 20px;
+      }
+      label {
+        font-size: 1.2em;
+      }
+      textarea {
+        font-family: monospace;
+        font-size: 1.1em;
+        width: 100%;
+        padding: 10px;
+        box-sizing: border-box;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        resize: vertical;
+      }
+      input[type="submit"] {
+        background-color: #4CAF50;
+        color: white;
+        font-size: 1.2em;
+        padding: 10px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+      }
+      input[type="submit"]:hover {
+        background-color: #45a049;
+      }
+      pre {
+        font-family: monospace;
+        font-size: 1.1em;
+        background-color: #f9f9f9;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        padding: 10px;
+        white-space: pre-wrap;
+      }
+      .logo {
+        display: block;
+        margin: 0 auto;
+        max-width: 200px;
+        padding: 20px 0;
+      }
+    </style>
+  </head>
+  <body>
+    <img class="logo" src="https://www.roboticsbusinessreview.com/wp-content/uploads/2020/05/diligent_robotics_logo_2.png" alt="Diligent Robotics logo">
+    <h1>Convert CircleCI to GitlabCI</h1>
+    <form method="POST">
+      <label for="circleci_config">CircleCI Configuration:</label>
+      <br>
+      <textarea id="circleci_config" name="circleci_config" rows="10" cols="80"></textarea>
+      <br>
+      <input type="submit" value="Convert">
+    </form>
+    {% if gitlabci_config %}
+    <h2>GitlabCI Configuration:</h2>
+    <pre>{{ gitlabci_config }}</pre>
+    {% endif %}
+  </body>
+</html>
