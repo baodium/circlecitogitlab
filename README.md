@@ -1,6 +1,6 @@
-# OpenAI API Quickstart - Python example app
+# This is a flask app that converts a circleci yaml file to a gitlab yaml file 
 
-This is an example pet name generator app used in the OpenAI API [quickstart tutorial](https://beta.openai.com/docs/quickstart). It uses the [Flask](https://flask.palletsprojects.com/en/2.0.x/) web framework. Check out the tutorial or follow the instructions below to get set up.
+This is an example app created to convert a circleci file to gitlab filepet name generator app used in the OpenAI API [quickstart tutorial](circlecitogitlab-hl5wxsts3-baodium-gmailcom.vercel.app). It uses the [Flask](https://flask.palletsprojects.com/en/2.0.x/) web framework and openai. Check out the tutorial or follow the instructions below to get set up.
 
 ## Setup
 
@@ -11,7 +11,7 @@ This is an example pet name generator app used in the OpenAI API [quickstart tut
 3. Navigate into the project directory
 
    ```bash
-   $ cd openai-quickstart-python
+   $ cd circlecitogitlab
    ```
 
 4. Create a new virtual environment
